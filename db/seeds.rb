@@ -69,3 +69,20 @@ RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @chicken, quantity: 2)
 RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @salt, quantity: 1)
 RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @maggi, quantity: 3)
 
+# Prepare Yam and Egg Sauce
+RecipeFood.create(recipe: @yam_and_egg_sauce, food: @yam, quantity: 1)
+RecipeFood.create(recipe: @yam_and_egg_sauce, food: @eggs, quantity: 1)
+RecipeFood.create(recipe: @yam_and_egg_sauce, food: @onions, quantity: 1)
+RecipeFood.create(recipe: @yam_and_egg_sauce, food: @vegetable_oil, quantity: 1)
+RecipeFood.create(recipe: @yam_and_egg_sauce, food: @salt, quantity: 1)
+RecipeFood.create(recipe: @yam_and_egg_sauce, food: @maggi, quantity: 1)
+
+# Prepare Rice and Chicken Stew
+RecipeFood.create(recipe: @rice_and_chicken_stew, food: @rice, quantity: 1)
+RecipeFood.create(recipe: @rice_and_chicken_stew, food: @onions, quantity: 1)
+RecipeFood.create(recipe: @rice_and_chicken_stew, food: @tomatoes, quantity: 1)
+RecipeFood.create(recipe: @rice_and_chicken_stew, food: @pepper, quantity: 1)
+RecipeFood.create(recipe: @rice_and_chicken_stew, food: @bay_leaves, quantity: 1)
+RecipeFood.create(recipe: @rice_and_chicken_stew, food: @chicken, quantity: 1)
+RecipeFood.create(recipe: @rice_and_chicken_stew, food: @salt, quantity: 1)
+RecipeFood.create(recipe: @rice_and_chicken_stew, food: @maggi, quantity: 1)
