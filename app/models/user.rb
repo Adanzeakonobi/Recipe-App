@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :recipes, dependent: :destroy
   has_many :foods, dependent: :destroy
+
+  # validates :first_name, presence: { allow_blank: false, message: 'Please supply a user name' }
 end
