@@ -1,67 +1,71 @@
 # Create Users
 @user_one = User.create(first_name: "Joshua", last_name: "Ivie", email: "joshua@joshuaivie.com", photo: "https://avatars.dicebear.com/api/micah/joshua-ivie.svg", password: "password", password_confirmation: "password", confirmed_at: DateTime.now)
-@user_two = User.create(first_name: "Adaobi", last_name: "Okoye", email: "joshua@joshuaivie.com", photo: "https://avatars.dicebear.com/api/micah/ada-okoye.svg", password: "password", password_confirmation: "password", confirmed_at: DateTime.now)
+@user_one = User.create(first_name: "Adaobi", last_name: "Okoye", email: "joshua@joshuaivie.com", photo: "https://avatars.dicebear.com/api/micah/ada-okoye.svg", password: "password", password_confirmation: "password", confirmed_at: DateTime.now)
 
 # Create Recipes
-@food_one = Food.create(name: "Chicken", measurement_unit: "kg", price: 5, quantity: 1, user: @user_one)
-@food_two = Food.create(name: "Rice", measurement_unit: "kg", price: 15, quantity: 1, user: @user_one)
-@food_three = Food.create(name: "Beans", measurement_unit: "kg", price: 15, quantity: 1, user: @user_one)
-@food_four = Food.create(name: "Garri", measurement_unit: "kg", price: 10, quantity: 1, user: @user_one)
-@food_five = Food.create(name: "Egusi", measurement_unit: "kg", price: 5, quantity: 1, user: @user_one)
-@food_six = Food.create(name: "Yam", measurement_unit: "kg", price: 5, quantity: 1, user: @user_two)
-@food_seven = Food.create(name: "Plantain", measurement_unit: "kg", price: 5, quantity: 1, user: @user_two)
-@food_eight = Food.create(name: "Meat", measurement_unit: "kg", price: 5, quantity: 1, user: @user_two)
+@pounded_yam_and_bitter_leaf_soup = Recipe.create(name: "Pounded Yam & Bitter Leaf Soup", preparation_time: " minutes", cooking_time: "30 minutes", description: "Bitter Leaf Soup, also known as Ofe Onugbu is a popular Nigerian soup. Bitter leaf Soup is peculiar to the Igbo tribe of Eastern Nigeria\n\nA common misconception is that bitter leaf soup is bitter. However Ofe Onugbu does not taste bitter in the slightest. When the leaves are thoroughly washed, this gets rid of the bitterness before it’s added to the soup.", is_public: true, user: @user_one)
+@moin_moin_and_garri = Recipe.create(name: "Moin Moin & Garri", preparation_time: "30 minutes", cooking_time: "45 minutes", description: "When Nigerian people enjoy Jollof rice and fried plantains, they often place a dish of Moin Moin on the table. They also serve it at parties and special occasions alongside salad and soft drinks. Moin Moin is one of the most popular Nigerian side dishes.\n\nThis amazing food staple originated in the West of Nigeria. It is in the form of a thick and creamy paste made from black-eyed beans, onion, and ground red peppers. Depending on the preference of the cook, it can have a pyramid or cylindrical shape.", is_public: true, user: @user_one)
+@jollof_rice_and_chicken = Recipe.create(name: "Jollof Rice & Chicken", preparation_time: "30 minutes", cooking_time: "45 minutes", description: "Jollof rice is a popular West African dish that is made with rice, tomatoes, onions, and spices. It is a staple food in many West African countries, including Nigeria, Ghana, and Sierra Leone.\n\n It is also popular in the Caribbean, where it is known as rice and peas. Jollof rice is a staple food in many West African countries, including Nigeria, Ghana, and Sierra Leone. It is also popular in the Caribbean, where it is known as rice and peas.", is_public: false, user: @user_one)
+@yam_and_egg_sauce = Recipe.create(name: "Yam & Egg Sauce", preparation_time: "30 minutes", cooking_time: "45 minutes", description: "Egg sauce recipe is a dish cook with tomato, egg, pepper, onion, vegetable oil, and seasoning cube. It’s typically one of Nigerian staple food that is perfect for breakfast, lunch or dinner.\n\n Nigerian egg sauce is normally served with boiled yam.", is_public: false, user: @user_one)
+@rice_and_chicken_stew = Recipe.create(name: "Rice & Chicken Stew", preparation_time: "30 minutes", cooking_time: "45 minutes", description: "Rice and stew is a popular Nigerian dish made with rice, meat, and vegetables.\n\n It is a staple food in Nigeria and is often served with fried plantains.", is_public: false, user: @user_one)
 
-# Bitter leaf
-# Koko yam
-# Locust beans
-# Bitter leaf
-# Stock Fish
-# Cray Fish
-# Meat
-# Ponmo
-
-# Salt
-# Turmeric
-# Seasoning Cube
-# Sugar
-# Pepper
-# Black Pepper
-# Cammeroon Pepper
-# Uziza Seed
-# Curry
-# Bay Leafs
-# Thyme
-
-# Garri
-# Yam
-# Cassava
-# Wheat
-
-@recipe_one = Recipe.create(name: "Pounded Yam & Bitter Leaf Soup", preparation_time: " minutes", cooking_time: "30 minutes", description: "This is ", is_public: true, user: @user_one)
-@recipe_two = Recipe.create(name: "Moin Moin", preparation_time: "30 minutes", cooking_time: "45 minutes", description: "When Nigerian people enjoy Jollof rice and fried plantains, they often place a dish of Moin Moin on the table. They also serve it at parties and special occasions alongside salad and soft drinks. Moin Moin is one of the most popular Nigerian side dishes.\n\nThis amazing food staple originated in the West of Nigeria. It is in the form of a thick and creamy paste made from black-eyed beans, onion, and ground red peppers. Depending on the preference of the cook, it can have a pyramid or cylindrical shape.", is_public: true, user: @user_one)
-
-# Onions
-# Tomatoes
-# Pepper
-
-# Vegetable Oil
-# Palm Oil
-
-# Carrot
-# Green Peas
-# Green Beans
-# Cabbage
-# Kidney Beans
-# Cauliflower
-# Sweet Corn
+# Create Foods/Ingredients
+@palm_oil = Food.create(name: "Palm Oil", measurement_unit: "L(s)", price: 3500, quantity: 2, user: @user_one)
+@bitter_leaf = Food.create(name: "Bitter Leaf", measurement_unit: "g(s)", price: 1200, quantity: 500, user: @user_one)
+@stock_fish = Food.create(name: "Stock Fish", measurement_unit: "g(s)", price: 2600, quantity: 140, user: @user_one)
+@cocoyam = Food.create(name: "Cocoyam", measurement_unit: "peice(s)", price: 4000, quantity: 15, user: @user_one)
+@blended_cray_fish = Food.create(name: "Blended Cray Fish", measurement_unit: "g(s)", price: 1600, quantity: 700, user: @user_one)
+@abuja_yam = Food.create(name: "Abuja Yam", measurement_unit: "tuber(s)", price: 2500, quantity: 1, user: @user_one)
+@red_meat = Food.create(name: "Red Meat", measurement_unit: "kg", price: 2500, quantity: 1, user: @user_one)
+@salt = Food.create(name: "Salt", measurement_unit: "g", price: 100, quantity: 500, user: @user_one)
+@maggi = Food.create(name: "Chicken bouillon Cubes(Maggi)", measurement_unit: "cube(s)", price: 1500, quantity: 100, user: @user_one)
+@dry_pepper = Food.create(name: "Dry Pepper", measurement_unit: "g", price: 1400, quantity: 700, user: @user_one)
+@iru = Food.create(name: "Locust Beans (Iru)", measurement_unit: "g", price: 1500, quantity: 200, user: @user_one)
+@oloyin_beans = Food.create(name: "Oloyin Beans", measurement_unit: "kg", price: 3500, quantity: 4, user: @user_one)
+@eggs = Food.create(name: "Eggs", measurement_unit: "Crate", price: 2500, quantity: 1, user: @user_one)
+@onions = Food.create(name: "Onions", measurement_unit: "kg", price: 5, quantity: 1, user: @user_one)
+@vegetable_oil = Food.create(name: "Vegetable Oil", measurement_unit: "kg", price: 5, quantity: 1, user: @user_one)
+@rice = Food.create(name: "Rice", measurement_unit: "kg", price: 15000, quantity: 25, user: @user_one)
+@onions = Food.create(name: "Onions", measurement_unit: "kg", price: 3200, quantity: 5, user: @user_one)
+@tomatoes = Food.create(name: "Tomatoes", measurement_unit: "kg", price: 1000, quantity: 1, user: @user_one)
+@pepper = Food.create(name: "Pepper", measurement_unit: "kg", price: 1100, quantity: 1, user: @user_one)
+@ginger = Food.create(name: "Ginger", measurement_unit: "kg", price: 900, quantity: 1, user: @user_one)
+@bay_leaves = Food.create(name: "Bay Leaves", measurement_unit: "g", price: 125, quantity: 2500, user: @user_one)
+@chicken = Food.create(name: "Chicken", measurement_unit: "kg", price: 1200, quantity: 1, user: @user_one)
+@yellow_garri = Food.create(name: "Yellow Garri", measurement_unit: "kg", price: 3900, quantity: 5, user: @user_one)
+@whtie_garri = Food.create(name: "White Garri", measurement_unit: "kg", price: 4400, quantity: 5, user: @user_one)
 
 
+# Prepare Pounded Yam & Bitter Leaf Soup
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @palm_oil, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @bitter_leaf, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @stock_fish, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @cocoyam, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @blended_cray_fish, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @abuja_yam, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @red_meat, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @salt, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @maggi, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @dry_pepper, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @iru, quantity: 1)
 
 
+# Prepare Moin Moin & Garri
+RecipeFood.create(recipe: @moin_moin_and_garri, food: @oloyin_beans, quantity: 1)
+RecipeFood.create(recipe: @moin_moin_and_garri, food: @eggs, quantity: 1)
+RecipeFood.create(recipe: @moin_moin_and_garri, food: @onions, quantity: 1)
+RecipeFood.create(recipe: @moin_moin_and_garri, food: @vegetable_oil, quantity: 1)
+RecipeFood.create(recipe: @moin_moin_and_garri, food: @rice, quantity: 1)
 
-# Create Foods
-@recipe_one = Recipe.create(name: "Riceand Chicken", preparation_time: "30 minutes", cooking_time: "30 minutes", description: "This is a chicken and rice recipe", is_public: true, user: @user_one)
-@recipe_two = Recipe.create(name: "Beans and Garri", preparation_time: "30 minutes", cooking_time: "30 minutes", description: "This is a beans and garri recipe", is_public: true, user: @user_one)
-@recipe_three = Recipe.create(name: "Bitter Leaf Soup", preparation_time: "30 minutes", cooking_time: "30 minutes", description: "This is a egusi and yam recipe", is_public: true, user: @user_two)
-@recipe_four = Recipe.create(name: "Plantain and Beans", preparation_time: "30 minutes", cooking_time: "30 minutes", description: "This is a plantain and meat recipe", is_public: true, user: @user_two)
+
+# Jollof Rice and Chicken
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @rice, quantity: 1)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @onions, quantity: 1)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @tomatoes, quantity: 1)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @pepper, quantity: 1)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @ginger, quantity: 1)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @bay_leaves, quantity: 1)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @chicken, quantity: 1)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @salt, quantity: 1)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @maggi, quantity: 1)
+
