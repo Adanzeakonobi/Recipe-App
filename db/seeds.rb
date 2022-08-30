@@ -1,6 +1,6 @@
 # Create Users
 @user_one = User.create(first_name: "Joshua", last_name: "Ivie", email: "joshua@joshuaivie.com", photo: "https://avatars.dicebear.com/api/micah/joshua-ivie.svg", password: "password", password_confirmation: "password", confirmed_at: DateTime.now)
-@user_one = User.create(first_name: "Adaobi", last_name: "Okoye", email: "joshua@joshuaivie.com", photo: "https://avatars.dicebear.com/api/micah/ada-okoye.svg", password: "password", password_confirmation: "password", confirmed_at: DateTime.now)
+@user_one = User.create(first_name: "Adaobi", last_name: "Okoye", email: "ada@ada.com", photo: "https://avatars.dicebear.com/api/micah/ada-okoye.svg", password: "password", password_confirmation: "password", confirmed_at: DateTime.now)
 
 # Create Recipes
 @pounded_yam_and_bitter_leaf_soup = Recipe.create(name: "Pounded Yam & Bitter Leaf Soup", preparation_time: " minutes", cooking_time: "30 minutes", description: "Bitter Leaf Soup, also known as Ofe Onugbu is a popular Nigerian soup. Bitter leaf Soup is peculiar to the Igbo tribe of Eastern Nigeria\n\nA common misconception is that bitter leaf soup is bitter. However Ofe Onugbu does not taste bitter in the slightest. When the leaves are thoroughly washed, this gets rid of the bitterness before it’s added to the soup.", is_public: true, user: @user_one)
