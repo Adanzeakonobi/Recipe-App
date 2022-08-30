@@ -37,35 +37,35 @@
 
 
 # Prepare Pounded Yam & Bitter Leaf Soup
-RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @palm_oil, quantity: 1)
-RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @bitter_leaf, quantity: 1)
-RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @stock_fish, quantity: 1)
-RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @cocoyam, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @palm_oil, quantity: 0.5)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @bitter_leaf, quantity: 12)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @stock_fish, quantity: 3)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @cocoyam, quantity: 20)
 RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @blended_cray_fish, quantity: 1)
 RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @abuja_yam, quantity: 1)
-RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @red_meat, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @red_meat, quantity: 4)
 RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @salt, quantity: 1)
-RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @maggi, quantity: 1)
+RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @maggi, quantity: 2)
 RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @dry_pepper, quantity: 1)
 RecipeFood.create(recipe: @pounded_yam_and_bitter_leaf_soup, food: @iru, quantity: 1)
 
 
 # Prepare Moin Moin & Garri
-RecipeFood.create(recipe: @moin_moin_and_garri, food: @oloyin_beans, quantity: 1)
-RecipeFood.create(recipe: @moin_moin_and_garri, food: @eggs, quantity: 1)
-RecipeFood.create(recipe: @moin_moin_and_garri, food: @onions, quantity: 1)
+RecipeFood.create(recipe: @moin_moin_and_garri, food: @oloyin_beans, quantity: 2)
+RecipeFood.create(recipe: @moin_moin_and_garri, food: @eggs, quantity: 4)
+RecipeFood.create(recipe: @moin_moin_and_garri, food: @onions, quantity: 2)
 RecipeFood.create(recipe: @moin_moin_and_garri, food: @vegetable_oil, quantity: 1)
 RecipeFood.create(recipe: @moin_moin_and_garri, food: @rice, quantity: 1)
 
 
 # Jollof Rice and Chicken
 RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @rice, quantity: 1)
-RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @onions, quantity: 1)
-RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @tomatoes, quantity: 1)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @onions, quantity: 3)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @tomatoes, quantity: 2)
 RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @pepper, quantity: 1)
 RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @ginger, quantity: 1)
 RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @bay_leaves, quantity: 1)
-RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @chicken, quantity: 1)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @chicken, quantity: 2)
 RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @salt, quantity: 1)
-RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @maggi, quantity: 1)
+RecipeFood.create(recipe: @jollof_rice_and_chicken, food: @maggi, quantity: 3)
 
