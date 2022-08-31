@@ -8,8 +8,12 @@ class User < ApplicationRecord
   has_many :foods, dependent: :destroy
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   validates :first_name, presence: { allow_blank: false, message: 'Please input your first name' }
   validates :last_name, presence: { allow_blank: false, message: 'Please input your last name' }
+=======
+  # validates :first_name, presence: { allow_blank: false, message: 'Please supply a user name' }
+>>>>>>> 4c7ca9b870662fba2cefc1f51c83d5865fc2bd44
 =======
   # validates :first_name, presence: { allow_blank: false, message: 'Please supply a user name' }
 >>>>>>> 4c7ca9b870662fba2cefc1f51c83d5865fc2bd44
