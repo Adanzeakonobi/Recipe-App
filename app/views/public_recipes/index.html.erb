@@ -1,0 +1,8 @@
+<h1>Public Recipes</h1>
+<section class="list_container">
+  <ul class="recipe_list">
+    <% @public_recipes.each do |recipe| %>
+      <%= render partial: 'recipe_list_item', locals: {recipe: recipe} %>
+    <% end %>
+  </ul>
+</section>
