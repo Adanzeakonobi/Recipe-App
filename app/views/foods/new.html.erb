@@ -1,3 +1,4 @@
+<h3>Add Food:</h3>
 <%= form_with url: foods_path, method: :post, local: true, scope: :add_food do |form| %>
 
     <div>
@@ -13,6 +14,11 @@
     <div>
       <%= form.label :price %><br>
       <%= form.text_field :price, size: "80x6" %>
+    </div>
+
+    <div>
+    <%= form.label :quantity %><br>
+    <%= form.text_field :quantity, size: "80x6" %>
     </div>
   
     <%= form.submit 'Save Food' %>
