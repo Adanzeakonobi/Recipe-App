@@ -3,11 +3,11 @@ class RecipesController < ApplicationController
 
   def new; end
 
-  def index; end
+  def index
+    @recipes = Recipe.where(user_id: current_user.id)
+  end
 
   def show; end
 
   def destroy; end
-
-  def public_recipes; end
 end
