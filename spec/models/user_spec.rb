@@ -7,8 +7,7 @@ RSpec.describe User, type: :model do
     # end
     before(:example) do
       @user = User.new(first_name: 'Joshua', last_name: 'Ivie', email: 'joshua@joshuaivie.com',
-                       photo: 'https://avatars.dicebear.com/api/micah/joshua-ivie.svg', password: 'password',
-                       password_confirmation: 'password', confirmed_at: DateTime.now)
+                       photo: 'https://avatars.dicebear.com/api/micah/joshua-ivie.svg', password: 'password', password_confirmation: 'password', confirmed_at: DateTime.now)
     end
 
     it 'User should be valid' do
