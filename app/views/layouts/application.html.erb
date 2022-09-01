@@ -9,9 +9,13 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } if user_signed_in?%>
-    <%= yield %>
+    <div class="page_container <%= 'show_menu' if user_signed_in? %>">
+      <%= render "layouts/navbar" if user_signed_in? %>
+      <main class="main_page">
+        <%= yield %>
+      </main>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
   </body>
 </html>
