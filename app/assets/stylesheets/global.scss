@@ -24,9 +24,11 @@ body {
 
   &.show_menu {
     .main_page {
-      width: 75%;
+      width: calc(100vw - 250px);
       flex-grow: 1;
       padding: 50px 80px;
+      margin-left: 250px;
+      overflow-x: hidden;
 
       .page_header {
         margin-bottom: 65px;
@@ -48,10 +50,11 @@ body {
     }
 
     .main_menu {
-      width: 25%;
-      max-width: 250px;
+      width: 250px;
       background: #f3f3f3;
       border-right: 1px solid #e5e5e5;
+      position: fixed;
+      height: 100vh;
     }
   }
 
