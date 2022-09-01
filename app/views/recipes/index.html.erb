@@ -1,0 +1,8 @@
+<% content_for :page_header do %>My Recipes<% end %>
+<section class="list_container">
+  <ul class="recipe_list">
+    <% @recipes.includes(:user, :foods, :recipe_foods).each do |recipe| %>
+      <%= render partial: 'recipe_list_item', locals: {recipe: recipe, public_recipes: false} %>
+    <% end %>
+  </ul>
+</section>
