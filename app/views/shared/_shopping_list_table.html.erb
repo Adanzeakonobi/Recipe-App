@@ -1,0 +1,18 @@
+<% if !@data.empty? %>
+  <table class="food-table">
+    <tr class="food-table-row">
+      <th class="food-table-header">Food</th>
+      <th class="food-table-header">Quantity</th>
+      <th class="food-table-header">Price</th>
+    </tr>
+    <% @data.each do |name, vals| %>
+      <tr class="food-table-row">
+        <td class="food-table-data"><%= name %></td>
+        <td class="food-table-data"><%= vals[:difference] %></td>
+        <td class="food-table-data">$<%= vals[:price] %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <div>You have enough food in your inventory. Now go cook some recipes!</div>
+<% end %>
