@@ -132,6 +132,26 @@ body {
       border-radius: 10px;
       overflow: hidden;
       cursor: pointer;
+      position: relative;
+
+      .recipe_delete_button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border: none;
+        padding: 10px 13px;
+        border-radius: 5px;
+        color: #2ec76d;
+        background: #fff;
+        border: 1px solid #2ec76d;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.2, 0, 0, 1) 0;
+
+        &:hover {
+          color: #fff;
+          background: #2ec76d;
+        }
+      }
 
       .recipe_list_item_link {
         display: flex;
