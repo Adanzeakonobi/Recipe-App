@@ -2,14 +2,12 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, Food
+    return unless user.present?
+
     can :read, Recipe, public: true
     can :manage, Food, user: user
     can :manage, Recipe, user: user
-    return unless user
-
-    can :manage, Ingredient if user # TODO: handle Ingredient permissions correctly
-
+    can :manage, RecipeFood, user:
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?

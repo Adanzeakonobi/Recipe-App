@@ -1,37 +1,14 @@
+
 <div>
-  <h1>Shopping Lists</h1>
-
-  <div>
-    <p>Amount of food items to buy: <%= Recipe.all.count %> </p>
-
+  <div class="shopping-stats">
+    <span class="shopping-items">
+      Amount of food items to buy: <%= @data.size %>
+    </span>
+    <span class="shopping-cost">
+      Total cost of food items: $<%= @total_cost %>
+    </span>
   </div>
-  <div>
-    <p> Total value of food needed: $ <%= Food.all.sum(:price) %> </p>
+  <div class="shopping-table">
+    <%= render "shared/food_table", type: 'shopping' %>
   </div>
-
-  <table class="table">
-        <thead>
-            <tr>
-            <th >Food</th>
-            <th >Quantity</th>
-            <th >Price</th>
-            <th >Actions</th>
-            </tr>
-        </thead>
-
-        <tbody>
-        <% @missing_food.each do |food|%>
-            <tr>
-            <td><%= food.food.name %></td>
-            <td><%= food.quantity %></td>
-            <td><%= food.food.price %></td>
-            <td><%= button_to "Delete Food", food_path(food.id), method: :delete, 
-                    data: {confirm: 'Are you sure?'}, class: "btn btn-primary" %> </td>
-            
-            </tr>
-            <% end %>
-        </tbody>
-
-
-        </table>
 </div>
