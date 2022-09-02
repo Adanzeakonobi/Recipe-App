@@ -1,3 +1,32 @@
 <li class="recipe_list_item">
-  <%= link_to recipe.name, recipe %>
+  <%= link_to recipe_path(recipe), class: 'recipe_list_item_link' do %>
+    <div class="food_picture_container">
+      <div class="food_picture" style="background-image:url(<%= generate_food_photo %>)"></div>
+    </div>
+    <div class="recipe_details">
+      <div class="recipe_name">
+        <%= recipe.name %>
+      </div>
+      <div class="recipe_creator">
+        By: <%= "#{recipe.user.first_name} #{recipe.user.last_name}" %>
+      </div>
+      <div class="recipe_description">
+        <% if public_recipes %>
+          <div class="recipe_ingredients">Total Food Items: <%= recipe.foods.count%></div>
+          <div class="recipe_cost">Total Price: ₦<%= calculate_recipe_cost(recipe) %></div>
+        <% else %>
+          <%= crop_item_description(recipe.description) %>
+        <% end %>
+      </div>
+      <div class="recipe_meta">
+        <div class="recipe_time">
+          <%= bootstrap_icon "clock", width: 15, height: 15 %>
+          <%= integer_to_hours(recipe.preparation_time + recipe.cooking_time) %>
+        </div>
+        <div class="recipe_rating">
+          <%= generate_random_rating %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </li>

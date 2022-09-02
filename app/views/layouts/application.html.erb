@@ -12,6 +12,12 @@
     <div class="page_container <%= 'show_menu' if user_signed_in? %>">
       <%= render "layouts/navbar" if user_signed_in? %>
       <main class="main_page">
+      <% if user_signed_in? %>
+          <header class="page_header">
+            <span class="greeting">Hello, <%= current_user.first_name%></span>
+            <h1 class="page_title"><%= content_for?(:page_header) ? yield(:page_header) : "Recipe App" %></h1>
+          </header>
+        <% end %>
         <%= yield %>
       </main>
       <p class="notice"><%= notice %></p>

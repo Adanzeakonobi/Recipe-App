@@ -9,26 +9,26 @@
         <% end %>
       </li>
       <li>
-        <%= link_to  public_recipes_path, class: 'menu_item' do %>
+      <%= link_to public_recipes_path, class: class_names('menu_item', { active: current_page?(public_recipes_path) }) do %>
           <%= bootstrap_icon "search", width: 10, height: 10 %>
           <span class="menu_item_text">Public Recipes</span>
         <% end %>
       </li>
       <li>
-        <%= link_to recipes_path, class: 'menu_item' do %>
+      <%= link_to recipes_path, class: class_names('menu_item', { active: current_page?(recipes_path) }) do %>
           <%= bootstrap_icon "card-checklist", width: 10, height: 10 %>
           <span class="menu_item_text">My Recipies</span>
         <% end %>
       </li>
       <li>
-        <%= link_to foods_path, class: 'menu_item' do %>
+      <%= link_to foods_path, class: class_names('menu_item', { active: current_page?(foods_path) }) do %>
           <%= bootstrap_icon "egg-fill", width: 10, height: 10 %>
           <span class="menu_item_text">My Food</span>
         <% end %>
       </li>
 
       <li>
-        <%= link_to general_shopping_list_path, class: 'menu_item' do %>
+        <%= link_to general_shopping_list_path, class: class_names('menu_item', { active: current_page?(general_shopping_list_path) }) do %>
           <%= bootstrap_icon "egg-fill", width: 10, height: 10 %>
           <span class="menu_item_text">general_shopping_list</span>
         <% end %>
