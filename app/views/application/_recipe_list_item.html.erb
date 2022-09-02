@@ -29,4 +29,9 @@
       </div>
     </div>
   <% end %>
+  <% if (can? :destroy, recipe) & current_page?(recipes_path) %>
+    <%= button_to recipe, method: :delete, class: 'recipe_delete_button', confirm: "Are you sure You want to delete this comment?" do %>
+      <%= bootstrap_icon "trash-fill", width: 15, height: 15 %>
+    <% end %>
+  <% end %>
 </li>
