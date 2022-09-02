@@ -3,10 +3,12 @@ class FoodsController < ApplicationController
   include ApplicationHelper
 
   def index
+    @current_group = 'foods'
     @foods = current_user.foods
   end
 
   def new
+    @current_group = 'foods'
     # render :new
     @food = Food.new
   end
@@ -21,8 +23,6 @@ class FoodsController < ApplicationController
       render :new
     end
   end
-
-  def destroy; end
 
   private
 
