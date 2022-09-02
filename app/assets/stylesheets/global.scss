@@ -138,14 +138,13 @@ body {
         position: absolute;
         top: 15px;
         right: 15px;
-        border: none;
         padding: 10px 13px;
         border-radius: 5px;
         color: #2ec76d;
         background: #fff;
         border: 1px solid #2ec76d;
         cursor: pointer;
-        transition: all 0.3s cubic-bezier(0.2, 0, 0, 1) 0;
+        transition: all 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
 
         &:hover {
           color: #fff;
