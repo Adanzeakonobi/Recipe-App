@@ -32,10 +32,10 @@
     <div class="menu_title">Your Account</div>
     <ul class="menu_items">
       <li>
-        <%= link_to root_path, class: class_names('menu_item', { active: current_page?(root_path) }) do %>
+        <a href="/" class='menu_item'>
           <%= bootstrap_icon "person-circle", width: 10, height: 10 %>
           <span class="menu_item_text">Account</span>
-        <% end %>
+        </a>
       </li>
       <li>
         <%= link_to destroy_user_session_path,  class: 'menu_item', data: { turbo_method: :delete } do %>

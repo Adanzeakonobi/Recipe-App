@@ -9,7 +9,6 @@ class FoodsController < ApplicationController
 
   def new
     @current_group = 'foods'
-    # render :new
     @food = Food.new
   end
 
