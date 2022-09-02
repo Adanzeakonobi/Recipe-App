@@ -3,7 +3,7 @@ Rails.application.routes.draw do
         registrations: 'users/registrations'
       } 
       
-  root "public_recipes#index"
+  root "home#index"
   resources :recipes, except: [ :update ]
   resources :foods, except: [ :show, :update]
 
