@@ -86,10 +86,10 @@ body {
         align-items: center;
         gap: 15px;
         border-right: 3px solid transparent;
-        transition: all 0.3s cubic-bezier(.2, 0, 0, 1) 0s;
+        transition: all 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
 
         .menu_item_text {
-          transition: all 0.3s cubic-bezier(.2, 0, 0, 1) 0s;
+          transition: all 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
         }
 
         &:hover {
@@ -111,7 +111,7 @@ body {
 
   .food_picture_container {
     width: 250px;
-    aspect-ratio: 5/3.5;
+    min-width: 250px;
     background: #f3f3f3;
 
     .food_picture {
@@ -132,6 +132,25 @@ body {
       border-radius: 10px;
       overflow: hidden;
       cursor: pointer;
+      position: relative;
+
+      .recipe_delete_button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 10px 13px;
+        border-radius: 5px;
+        color: #2ec76d;
+        background: #fff;
+        border: 1px solid #2ec76d;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
+
+        &:hover {
+          color: #fff;
+          background: #2ec76d;
+        }
+      }
 
       .recipe_list_item_link {
         display: flex;
@@ -149,7 +168,7 @@ body {
           font-weight: 500;
           line-height: 1.5;
           color: #444;
-          transition: all 0.3s cubic-bezier(.2, 0, 0, 1) 0s;
+          transition: all 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
         }
 
         .recipe_description {
@@ -175,7 +194,7 @@ body {
           margin-top: auto;
 
           .recipe_rating {
-            color: #FFD700;
+            color: #ffd700;
             font-size: 1.5rem;
           }
         }
@@ -189,7 +208,5 @@ body {
         }
       }
     }
-
-
   }
 }

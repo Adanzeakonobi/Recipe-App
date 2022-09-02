@@ -9,5 +9,9 @@ class RecipesController < ApplicationController
 
   def show; end
 
-  def destroy; end
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    redirect_to recipes_path, notice: 'Recipe deleted'
+  end
 end
