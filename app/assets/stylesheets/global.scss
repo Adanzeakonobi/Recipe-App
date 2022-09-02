@@ -3,21 +3,25 @@
   height: 8px;
   background-color: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   background: #2ec76d;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
+
 body {
   background: #fafafa;
   font-family: Roboto, sans-serif;
   overflow-x: hidden;
 }
+
 .page_container {
   display: flex;
   min-height: 100vh;
   min-width: 100vw;
+
   &.show_menu {
     .main_page {
       width: calc(100vw - 250px);
@@ -25,13 +29,16 @@ body {
       padding: 50px 80px;
       margin-left: 250px;
       overflow-x: hidden;
+
       .page_header {
         margin-bottom: 65px;
+
         .greeting {
           color: #999;
           margin-bottom: 10px;
           display: block;
         }
+
         .page_title {
           font-size: 2rem;
           font-weight: 600;
@@ -39,6 +46,7 @@ body {
         }
       }
     }
+
     .main_menu {
       width: 250px;
       background: #f3f3f3;
@@ -47,12 +55,14 @@ body {
       height: 100vh;
     }
   }
+
   .main_nav,
   .account_nav {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
     margin: 50px 0;
+
     .menu_title {
       text-transform: uppercase;
       font-size: 12px;
@@ -60,9 +70,11 @@ body {
       color: #afafaf;
       padding-bottom: 10px;
     }
+
     .menu_items {
       display: flex;
       flex-direction: column;
+
       .menu_item {
         text-decoration: none;
         cursor: pointer;
@@ -83,10 +95,12 @@ body {
         &:hover {
           color: #2ec76d;
           border-right-color: #2ec76d;
+
           .menu_item_text {
             transform: translateX(5px);
           }
         }
+
         &.active {
           color: #2ec76d;
           border-right-color: #2ec76d;
@@ -107,10 +121,12 @@ body {
       height: 100%;
     }
   }
+
   .recipe_list {
     display: grid;
     grid-auto-rows: 1fr;
     gap: 50px;
+
     .recipe_list_item {
       border: 1px solid #e5e5e5;
       border-radius: 10px;
@@ -140,11 +156,13 @@ body {
         display: flex;
         height: 100%;
       }
+
       .recipe_details {
         flex-grow: 1;
         padding: 25px 35px;
         display: flex;
         flex-direction: column;
+
         .recipe_name {
           font-size: 1.5rem;
           font-weight: 500;
@@ -162,11 +180,13 @@ body {
           flex-direction: column;
           gap: 25px;
         }
+
         .recipe_creator {
           font-style: italic;
           color: #b3b3b3;
           margin-bottom: 15px;
         }
+
         .recipe_meta {
           display: flex;
           justify-content: space-between;
@@ -179,8 +199,10 @@ body {
           }
         }
       }
+
       &:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
         .recipe_name {
           color: #2ec76d;
         }
