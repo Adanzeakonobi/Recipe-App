@@ -7,7 +7,6 @@ class FoodsController < ApplicationController
   end
 
   def new
-    # render :new
     @food = Food.new
   end
 
