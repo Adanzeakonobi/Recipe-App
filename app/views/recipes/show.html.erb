@@ -1,1 +1,45 @@
 <% content_for :page_header do %><%= @recipe.name %><% end %>
+<div class="recipe_highlights">
+  <div>
+    <div>
+      <div class="recipe_highlight">
+        <div class="recipe_highlight_label">Preparation Time</div>
+        <div class="recipe_highlight_value"><%= @recipe.preparation_time %> minutes</div>
+      </div>
+      <div class="recipe_highlight">
+        <div class="recipe_highlight_label">Cooking Time</div>
+        <div class="recipe_highlight_value"><%= @recipe.cooking_time %> minutes</div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe_highlight">
+        <div class="recipe_highlight_label">Public</div>
+        <%# <% class="recipe_highlight_value">$<%= @recipe.price %>
+      </div>
+    </div>
+    <div class="recipe_description">
+      <div class="recipe_description_label">Description</div>
+      <div class="recipe_description_value"><%= @recipe.description %></div>
+    </div>
+  </div>
+</div>
+<div class="recipe_buttons">
+  <%= link_to "Add Ingredient", show_ingredient_modal_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'} %>
+  <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content"></div>
+    </div>
+  </div>
+</div>
+<div class="recipe_foods">
+  <div class="recipe_foods_label">Foods</div>
+  <div class="recipe_foods_list">
+    <% @recipe.recipe_foods.includes(:food).each do |recipe_food| %>
+      <div class="recipe_food">
+        <div class="recipe_food_name"><%= recipe_food.food.name %></div>
+        <div class="recipe_food_quantity"><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %></div>
+        <div class="recipe_food_value">₦ <%= calculate_food_value(recipe_food) %></div>
+      </div>
+    <% end %>
+  </div>
+</div>

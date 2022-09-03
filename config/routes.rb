@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   get "general_shopping_list", to: "general_shopping_list#index"
   get "public_recipes", to: "public_recipes#index"
+  get 'show_ingredient_modal', to: 'recipe_foods#show_ingredient_modal', as: :show_ingredient_modal
 end
