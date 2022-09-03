@@ -4,13 +4,15 @@ RSpec.describe 'food/index', type: :system do
   let(:user) do
     user = User.new(first_name: 'Joshua', last_name: 'Ivie', email: 'joshua@joshuaivie.com', password: 'password')
     user.password = 'password'
-   user.password_confirmation = 'password'
-   user.confirm
-   user
-  end 
+    user.password_confirmation = 'password'
+    user.confirm
+    user
+  end
 
-  subject(:food) { user.Food.create(name: "Palm Oil", measurement_unit: "L(s)", price: 3500, quantity: 2, user: ,
-    is_public: true ) }
+  subject(:food) do
+    user.Food.create(name: 'Palm Oil', measurement_unit: 'L(s)', price: 3500, quantity: 2, user:,
+                     is_public: true)
+  end
 
   before(:each) do
     fill_in 'email', with: 'joshua@joshuaivie.com'
@@ -28,7 +30,7 @@ RSpec.describe 'food/index', type: :system do
       it 'has a button to create a new food' do
         expect(page).to have_content('Add Food')
       end
-      
+
       it 'has a table with four columns: food, measurement unit, unit price and actions' do
         expect(page).to have_selector('th', text: 'Food')
         expect(page).to have_selector('th', text: 'Measurement Unit')

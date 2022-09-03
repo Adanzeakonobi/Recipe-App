@@ -3,49 +3,48 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .d-flex {
-    display: flex;
+  display: flex;
+}
+
+.d-flex-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-content-center {
+  justify-content: center;
+}
+
+.add-food-div {
+  justify-content: flex-end;
+
+  .add-food {
+    margin-top: 1.5rem;
+    margin-right: 3.5rem;
+    text-align: end;
   }
-  
-  .d-flex-column {
-    flex-direction: column;
+}
+
+table {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 50vw;
+  background-color: whitesmoke;
+  border-collapse: collapse;
+  border-spacing: 1px;
+
+  th,
+  td {
+    border: 1px solid gray;
+    padding: 0.2em;
+    text-align: center;
   }
-  
-  .justify-content-center {
-    justify-content: center;
+
+  td {
+    padding: 1rem;
+    box-sizing: content-box;
   }
-  
-  .align-content-center {
-    justify-content: center;
-  }
-  
-  .add-food-div {
-    justify-content: flex-end;
-  
-    .add-food {
-      margin-top: 1.5rem;
-      margin-right: 3.5rem;
-      text-align: end;
-    }
-  }
-  
-  table {
-    margin: 0 auto;
-    margin-top: 2rem;
-    width: 50vw;
-    background-color: whitesmoke;
-    border-collapse: collapse;
-    border-spacing: 1px;
-  
-    th,
-    td {
-      border: 1px solid gray;
-      padding: 0.2em;
-      text-align: center;
-    }
-  
-    td {
-      padding: 1rem;
-      box-sizing: content-box;
-    }
-  }
-  
+}
