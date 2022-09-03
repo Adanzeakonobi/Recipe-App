@@ -4,13 +4,13 @@ RSpec.describe 'Foods Index Page Features', type: :feature do
   before(:each) do
     visit user_session_path
     @user_one = User.new(
-        first_name: "Joshua", last_name: "Ivie", email: "joshua@joshuaivie.com", password: 'password', password_confirmation: "password"
+      first_name: 'Joshua', last_name: 'Ivie', email: 'joshua@joshuaivie.com', password: 'password', password_confirmation: 'password'
     )
     fill_in 'Email', with: 'joshua@joshuaivie.com'
     fill_in 'Password', with: 'password'
     click_button 'Log in'
 
-    @salt = @user_one.foods.create!(name: "Salt", measurement_unit: "g", price: 100, quantity: 500)
+    @salt = @user_one.foods.create!(name: 'Salt', measurement_unit: 'g', price: 100, quantity: 500)
     visit foods_path
   end
 

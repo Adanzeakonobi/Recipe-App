@@ -4,7 +4,7 @@ describe 'Recipe Index Page', type: :feature do
   before(:each) do
     visit user_session_path
     @user_one = User.new(
-        first_name: "Joshua", last_name: "Ivie", email: "joshua@joshuaivie.com", password: 'password', password_confirmation: "password"
+      first_name: 'Joshua', last_name: 'Ivie', email: 'joshua@joshuaivie.com', password: 'password', password_confirmation: 'password'
     )
     fill_in 'Email', with: 'joshua@joshuaivie.com'
     fill_in 'Password', with: 'password'
@@ -30,11 +30,11 @@ describe 'Recipe Index Page', type: :feature do
     end
 
     it 'a recipe\'s cooking time' do
-        expect(page).to have_content 'cooking_time'
+      expect(page).to have_content 'cooking_time'
     end
 
     it 'a recipe\'s preparation time' do
-        expect(page).to have_content 'preparation_time'
+      expect(page).to have_content 'preparation_time'
     end
   end
 end
