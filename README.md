@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Recipe App]()
+[Recipe App](https://aj-recipeapp-staging.herokuapp.com/)
 
 ## Getting Started
 
