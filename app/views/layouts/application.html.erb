@@ -9,6 +9,7 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <%= turbo_frame_tag "remote_modal", target: "_top" %>
     <div class="page_container <%= 'show_menu' if user_signed_in? %>">
       <%= render "layouts/navbar" if user_signed_in? %>
       <main class="main_page">

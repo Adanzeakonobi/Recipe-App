@@ -161,6 +161,47 @@ body {
     }
   }
 
+  .recipe_highlights {
+    padding: 20px;
+    background: #f3f3f3;
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+
+    .recipe_highlight,
+    .recipe_description {
+      margin-bottom: 15px;
+    }
+
+    .recipe_highlight_label,
+    .recipe_description_label {
+      font-weight: 500;
+      color: #666;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .recipe_highlight_details {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      .recipe_highlight_key_details {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .recipe_buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 30px;
+  }
+
   .food_picture_container {
     width: 250px;
     min-width: 250px;

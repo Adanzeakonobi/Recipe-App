@@ -1,4 +1,5 @@
 <% content_for :page_header do %>My Recipes<% end %>
+<%= link_to "New Recipe", new_recipe_path, class: "btn btn-primary", data: { turbo_frame: "remote_modal" } %>
 <section class="list_container">
   <ul class="recipe_list">
     <% @recipes.includes(:user, :foods, :recipe_foods).each do |recipe| %>

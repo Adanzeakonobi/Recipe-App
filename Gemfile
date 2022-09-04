@@ -11,7 +11,9 @@ gem 'sass-rails'
 
 gem 'rest-client'
 
-gem 'bootstrap', '~> 5.2.0'
+gem 'bootstrap', '~> 5.1.3'
+
+gem 'popper_js', '~> 2.9.3'
 
 gem 'autoprefixer-rails'
 
@@ -35,10 +37,10 @@ gem 'puma', '~> 5.0'
 gem 'importmap-rails'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem 'turbo-rails'
+gem 'turbo-rails', '~> 1.0.1'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails'
+gem 'stimulus-rails', '~> 1.0.2'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'

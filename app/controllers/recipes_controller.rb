@@ -32,9 +32,16 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
+  def show_ingredient_modal
+    respond_to do |format|
+      format.js
+      format.html
+    end
+  end
+
   private
 
   def recipe_params
-    params.permit(:name, :preparation_time, :cooking_time, :description, :is_public, :user_id)
+    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :is_public, :user_id)
   end
 end
