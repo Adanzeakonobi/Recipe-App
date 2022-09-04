@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Recipes', type: :request do
   let(:user) do
-    user = User.first
+    User.first
   end
 
   subject(:recipe) do

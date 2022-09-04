@@ -14,6 +14,11 @@
     <div>
       <div class="recipe_highlight">
         <div class="recipe_highlight_label">Public</div>
+        <%= form_for(@recipe) do |f| %>
+          <div class='form-group'>
+            <%= f.check_box :is_public, value: @recipe.is_public, class: 'public_recipe_toggle switch', onchange: 'this.form.submit();'%>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -25,7 +30,7 @@
 <% if (can? :manage, @recipe) %>
   <div class="recipe_buttons">
     <%= link_to "Generate Shopping List", new_recipe_food_path, class: "btn btn-primary" %>
-    <%= link_to "Add Ingredient", new_recipe_food_path, class: "btn btn-primary", data: { turbo_frame: "remote_modal" } %>
+    <%= link_to "Add Food", new_recipe_food_path, class: "btn btn-primary", data: { turbo_frame: "remote_modal" } %>
   </div>
 <% end %>
 <div class="recipe_foods">

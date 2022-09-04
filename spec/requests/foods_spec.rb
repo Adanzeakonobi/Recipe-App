@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Foods', type: :request do
   let(:user) do
-    user = User.first
+    User.first
   end
 
   before(:each) do
