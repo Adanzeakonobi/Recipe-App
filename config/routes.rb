@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       } 
       
   root "home#index"
-  resources :recipes, except: [ :update ]
+  resources :recipes
   resources :foods, except: [ :show, :update]
   resources :public_recipes, only: [ :index ]
   

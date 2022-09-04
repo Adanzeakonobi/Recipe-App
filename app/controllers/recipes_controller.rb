@@ -32,10 +32,12 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
-  def show_ingredient_modal
-    respond_to do |format|
-      format.js
-      format.html
+  def update
+    @recipe = Recipe.find(params[:id])
+    if @recipe.update(recipe_params)
+      redirect_to recipe_path(@recipe), notice: 'Recipe updated'
+    else
+      flash[:error] = @recipe.errors.full_messages
     end
   end
 
