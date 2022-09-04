@@ -3,10 +3,12 @@ class FoodsController < ApplicationController
   include ApplicationHelper
 
   def index
+    @current_group = 'foods'
     @foods = current_user.foods
   end
 
   def new
+    @current_group = 'foods'
     @food = Food.new
   end
 

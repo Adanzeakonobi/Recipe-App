@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
+  resources :recipe_foods
    devise_for :users, controllers: {
         registrations: 'users/registrations'
       } 
       
-  root "public_recipes#index"
+  root "home#index"
   resources :recipes, except: [ :update ]
   resources :foods, except: [ :show, :update]
-
- 
-
-  get "general_shopping_list", to: "general_shopping_list#index"
-  get "public_recipes", to: "public_recipes#index"
+  resources :public_recipes, only: [ :index ]
+  resources :general_shopping_list, only: [ :index ]
 end

@@ -9,6 +9,7 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <%= turbo_frame_tag "remote_modal", target: "_top" %>
     <div class="page_container <%= 'show_menu' if user_signed_in? %>">
       <%= render "layouts/navbar" if user_signed_in? %>
       <main class="main_page">
@@ -20,8 +21,20 @@
         <% end %>
         <%= yield %>
       </main>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <% flash.each do |message_type, message| %>
+        <div class="<%= "alert alert-#{message_type}" %>" id="notice">
+          <%= message %>
+          <button type="button" class="close" onclick="timeoutFlashMessage()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <% end %>
     </div>
   </body>
+  <script>
+    const timeoutFlashMessage = () => {
+      const flashMessage = document.getElementById('notice');
+      flashMessage.remove()
+    }
+  </script>
 </html>

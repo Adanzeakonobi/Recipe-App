@@ -29,4 +29,8 @@ module ApplicationHelper
       .reduce(0) { |sum, num| sum + ((num.food['price'] / num.food['quantity']) * num['quantity']) },
                           precision: 2, delimiter: ',')
   end
+
+  def calculate_food_value(recipe_food)
+    number_with_precision(recipe_food.food['price'] * recipe_food['quantity'], precision: 2, delimiter: ',')
+  end
 end
