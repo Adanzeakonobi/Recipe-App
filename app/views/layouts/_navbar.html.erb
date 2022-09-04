@@ -1,0 +1,54 @@
+<aside class="main_menu">
+  <nav class="main_nav">
+    <div class="menu_title">Menu</div>
+    <ul class="menu_items">
+      <li>
+        <%= link_to root_path, class: class_names('menu_item', { active: current_page?(root_path) })  do %>
+          <%= bootstrap_icon "grid-fill", width: 10, height: 10 %>
+          <span class="menu_item_text">Home</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to  public_recipes_path, class: class_names('menu_item', { active: current_page?(public_recipes_path) || @current_group == 'public_recipes' }) do %>
+          <%= bootstrap_icon "search", width: 10, height: 10 %>
+          <span class="menu_item_text">Public Recipes</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to recipes_path, class: class_names('menu_item', { active: current_page?(recipes_path) || @current_group == 'recipes' }) do %>
+          <%= bootstrap_icon "card-checklist", width: 10, height: 10 %>
+          <span class="menu_item_text">My Recipies</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to foods_path, class: class_names('menu_item', { active: current_page?(foods_path) || @current_group == 'foods' }) do %>
+          <%= bootstrap_icon "egg-fill", width: 10, height: 10 %>
+          <span class="menu_item_text">My Food</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to general_shopping_list_path, class: class_names('menu_item', { active: current_page?(general_shopping_list_path) }) do %>
+          <%= bootstrap_icon "bag-fill", width: 10, height: 10 %>
+          <span class="menu_item_text">General Shopping List</span>
+        <% end %>
+      </li>
+    </ul>
+  </nav>
+  <nav class="account_nav">
+    <div class="menu_title">Your Account</div>
+    <ul class="menu_items">
+      <li>
+        <a href="/" class='menu_item'>
+          <%= bootstrap_icon "person-circle", width: 10, height: 10 %>
+          <span class="menu_item_text">Account</span>
+        </a>
+      </li>
+      <li>
+        <%= link_to destroy_user_session_path,  class: 'menu_item', data: { turbo_method: :delete } do %>
+          <%= bootstrap_icon "box-arrow-left", width: 10, height: 10 %>
+          <span class="menu_item_text">Sign out</span>
+        <% end %>
+      </li>
+    </ul>
+  </nav>
+</aside>

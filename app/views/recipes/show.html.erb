@@ -1,0 +1,61 @@
+<% content_for :page_header do %><%= @recipe.name %><% end %>
+<div class="recipe_highlights">
+  <div class="recipe_highlight_details">
+    <div class="recipe_highlight_key_details">
+      <div class="recipe_highlight">
+        <div class="recipe_highlight_label">Preparation Time</div>
+        <div class="recipe_highlight_value"><%= @recipe.preparation_time %> minutes</div>
+      </div>
+      <div class="recipe_highlight">
+        <div class="recipe_highlight_label">Cooking Time</div>
+        <div class="recipe_highlight_value"><%= @recipe.cooking_time %> minutes</div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe_highlight">
+        <div class="recipe_highlight_label">Public</div>
+        <%= form_for(@recipe) do |f| %>
+          <div class='form-group'>
+            <%= f.check_box :is_public, value: @recipe.is_public, class: 'public_recipe_toggle switch', onchange: 'this.form.submit();'%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="recipe_description">
+    <div class="recipe_description_label">Description</div>
+    <div class="recipe_description_value"><%= @recipe.description %></div>
+  </div>
+</div>
+<% if (can? :manage, @recipe) %>
+  <div class="recipe_buttons">
+    <%= link_to "Generate Shopping List", new_recipe_food_path, class: "btn btn-primary" %>
+    <%= link_to "Add Food", new_recipe_food_path, class: "btn btn-primary", data: { turbo_frame: "remote_modal" } %>
+  </div>
+<% end %>
+<div class="recipe_foods">
+  <div class="recipe_foods_list">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Food</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Value</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @recipe.recipe_foods.includes(:food).each_with_index do |recipe_food, index| %>
+          <tr>
+            <th scope="row"><%= (index + 1)%></th>
+            <td><%= recipe_food.food.name %></td>
+            <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %></td>
+            <td>₦ <%= calculate_food_value(recipe_food) %></td>
+            <td></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

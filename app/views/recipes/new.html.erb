@@ -1,0 +1,4 @@
+<% content_for :page_header do %>New Recipe<% end %>
+<%= render "remote_modal", title: "New Recipe" do %>
+  <%= render "form", recipe: @recipe %>
+<% end %>
