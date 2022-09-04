@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Food, type: :model do
   before(:each) do
-    @user = User.create!(first_name: 'Adaobi', last_name: 'Okoye', email: 'ada@ada.com', password: 'password')
+    @user = User.first
     @food = @user.foods.create(name: 'Akara', price: 200, measurement_unit: 'kg', quantity: 10)
   end
 

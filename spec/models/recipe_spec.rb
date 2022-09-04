@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Recipe, type: :model do
   subject do
-    user = User.new(first_name: 'Adaobi', last_name: 'Okoye', email: 'ada@ada.com', password: 'password')
+    user = User.first
     recipe = user.recipes.new(
       user:,
       name: 'Pizza', preparation_time: 25,

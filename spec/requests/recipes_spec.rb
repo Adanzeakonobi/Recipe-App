@@ -2,11 +2,7 @@ require 'rails_helper'
 
 describe 'Recipes', type: :request do
   let(:user) do
-    user = User.new(first_name: 'Joshua', last_name: 'Ivie', email: 'joshua@joshuaivie.com', password: 'password')
-    user.password = 'password'
-    user.password_confirmation = 'password'
-    user.confirm
-    user
+    user = User.first
   end
 
   subject(:recipe) do

@@ -14,7 +14,6 @@
     <div>
       <div class="recipe_highlight">
         <div class="recipe_highlight_label">Public</div>
-        <%# <% class="recipe_highlight_value">$<%= @recipe.price %>
       </div>
     </div>
   </div>
@@ -23,10 +22,12 @@
     <div class="recipe_description_value"><%= @recipe.description %></div>
   </div>
 </div>
-<div class="recipe_buttons">
-  <%= link_to "Generate Shopping List", new_recipe_food_path, class: "btn btn-primary" %>
-  <%= link_to "Add Ingredient", new_recipe_food_path, class: "btn btn-primary", data: { turbo_frame: "remote_modal" } %>
-</div>
+<% if (can? :manage, @recipe) %>
+  <div class="recipe_buttons">
+    <%= link_to "Generate Shopping List", new_recipe_food_path, class: "btn btn-primary" %>
+    <%= link_to "Add Ingredient", new_recipe_food_path, class: "btn btn-primary", data: { turbo_frame: "remote_modal" } %>
+  </div>
+<% end %>
 <div class="recipe_foods">
   <div class="recipe_foods_list">
     <table class="table table-striped">

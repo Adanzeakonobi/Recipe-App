@@ -2,12 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Foods', type: :request do
   let(:user) do
-    user = User.new(first_name: 'Joshua', last_name: 'Ivie', email: 'joshua@joshuaivie.com', password: 'password')
-
-    user.password = 'password'
-    user.password_confirmation = 'password'
-    user.confirm
-    user
+    user = User.first
   end
 
   before(:each) do
