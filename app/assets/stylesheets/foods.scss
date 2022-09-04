@@ -1,0 +1,51 @@
+// Place all the styles related to the Foods controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-content-center {
+  justify-content: center;
+}
+
+.add-food-div {
+  justify-content: flex-end;
+
+  .add-food {
+    margin-top: 1.1rem;
+    margin-bottom: 1.2rem;
+    margin-right: 7.5rem;
+    text-align: end;
+  }
+}
+
+table {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 50vw;
+  background-color: whitesmoke;
+  border-collapse: collapse;
+  border-spacing: 1px;
+
+  th,
+  td {
+    border: 1px solid gray;
+    padding: 0.2em;
+    text-align: center;
+  }
+
+  td {
+    padding: 1rem;
+    box-sizing: content-box;
+  }
+}
